@@ -1,25 +1,31 @@
-export interface Cocktail {
+export interface Artist {
     id: number,
     name: string,
-    alcool: number,
-    rating: string,
+    style: string,
+    nationality: string,
+    period: string,
+    created_at: Date | string,
+    updated_at: Date | string
+}
+
+export interface Artwork {
+    id: number,
+    title: string,
     description: string,
-    difficulty_level: string,
-    rate: string,
-    created_at: Date | String,
-    updated_at: Date | String
+    theme: string,
+    date_of_creation: Date | string,
+    artist_id: number,
+    gallery_id: number,
+    created_at: Date | string,
+    updated_at: Date | string
 }
 
-export interface Ingredient{
+export interface Gallery{
     id: number,
     name: string,
-    created_at: Date | String,
-    updated_at: Date | String
-}
-
-export interface Measurement{
-    cocktail_recipe_id: number,
-    ingredient_id: number
-    quantity_amount: string,
-    description: string
+    address: string,
+    city: string,
+    type: string,
+    created_at: Date | string,
+    updated_at: Date | string
 }
